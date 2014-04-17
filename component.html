@@ -1,50 +1,50 @@
 <polymer-element name="ceci-text-input" attributes="inputname placeholdertext emitonchange label" extends="ceci-element" placeholdertext="Placeholder" inputname="Text Input">
+  <ceci-definition>
+    {
+      "tags": ["input", "form"],
+      "thumbnail": "./thumbnail.png",
+      "name": "Text Input",
+      "description": "A text input that broadcasts whatever a user types.",
+      "broadcasts": {
+        "sendData": {
+          "label": "Send Data",
+          "description": "Occurs when button is clicked or Enter key is pressed.",
+          "default": true
+        }
+      },
+      "listeners": {
+        "click": {
+          "description": "Causes a fake click event to occur.",
+          "label": "Send Data"
+        }
+      },
+      "attributes": {
+        "inputname": {
+          "label": "Input Name",
+          "description": "The name of this field, helpful when saving data.",
+          "editable": "text",
+          "listener": true,
+          "defaultListener": false
+        },
+        "placeholdertext": {
+          "label": "Placeholder Text",
+          "description": "The text you want your input field to show by default.",
+          "editable": "text",
+          "listener": true
+        },
+        "emitonchange": {
+          "label": "Emit on change",
+          "description": "Background color of the button while it is being clicked or tapped.",
+          "editable": "boolean",
+          "listener": true
+        }
+      }
+    }
+  </ceci-definition>
   <template>
     <link rel="stylesheet" href="component.css">
     <input id="inputText" type="text" on-input="{{input}}" on-keypress="{{keypress}}" /><button id="button" on-click="{{submit}}"></button>
     <shadow></shadow>
-    <script type="text/json" id="ceci-definition">
-      {
-        "tags": ["input", "form"],
-        "thumbnail": "./thumbnail.png",
-        "name": "Text Input",
-        "description": "A text input that broadcasts whatever a user types.",
-        "broadcasts": {
-          "sendData": {
-            "label": "Send Data",
-            "description": "Occurs when button is clicked or Enter key is pressed.",
-            "default": true
-          }
-        },
-        "listeners": {
-          "click": {
-            "description": "Causes a fake click event to occur.",
-            "label": "Send Data"
-          }
-        },
-        "attributes": {
-          "inputname": {
-            "label": "Input Name",
-            "description": "The name of this field, helpful when saving data.",
-            "editable": "text",
-            "listener": true,
-            "defaultListener": false
-          },
-          "placeholdertext": {
-            "label": "Placeholder Text",
-            "description": "The text you want your input field to show by default.",
-            "editable": "text",
-            "listener": true
-          },
-          "emitonchange": {
-            "label": "Emit on change",
-            "description": "Background color of the button while it is being clicked or tapped.",
-            "editable": "boolean",
-            "listener": true
-          }
-        }
-      }
-    </script>
   </template>
   <script>
     Polymer('ceci-text-input', {
