@@ -1,13 +1,10 @@
 :host {
   display: block;
   width: 100%;
-  height: 50px;
-  padding: 0;
-  height: 3.8rem;
 }
 
 :host input[type=text]{
-  padding: 0;
+  padding: 10px 5px;
   height: 100%;
   border: none;
   color: #000;
@@ -18,7 +15,6 @@
   width: 70%;
   border-radius: 0;
   margin: 0;
-  float: left;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   border: 0.1rem solid rgb(204, 204, 204);
@@ -30,8 +26,16 @@
   font-family: "FiraSans", sans-serif;
 }
 
-:host.onchange input[type=text]{
+:host .onchange input[type=text]{
   width: 100%;
+}
+
+:host .onchange button {
+  display: none;
+}
+
+:host #wrapper {
+  position: relative;
 }
 
 :host button {
@@ -39,13 +43,15 @@
   background: -webkit-linear-gradient(top, #f8f8f8, #ddd);
   border: 0.1rem solid #a6a6a6;
   border-radius: 0 0.2rem 0.2rem 0;
-  float: left;
+  right: 0px;
+
   width: 30%;
   padding: 0;
   height: 100%;
   font-weight: 500;
   font-size: 1.6rem;
   font-family: "FiraSans", sans-serif;
+  position: absolute;
 }
 
 :host button:active {
