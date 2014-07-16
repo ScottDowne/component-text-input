@@ -1,7 +1,9 @@
 {
 	"ceci-text-input": "Text Input with Button",
 	"ceci-text-input/description": "Sends text you've entered when you press the button.",
-	"ceci-text-input/button": "Submit",
+	"ceci-text-input/attributes/buttonlabel" : "Submit",
+	"ceci-text-input/attributes/buttonlabel/label" : "Button Label",
+	"ceci-text-input/attributes/buttonlabel/description" : "The label on the button.",
 	"ceci-text-input/attributes/inputname" : "Text Input",
 	"ceci-text-input/attributes/inputname/label" : "Input Name",
 	"ceci-text-input/attributes/inputname/description" : "The name of this field, helpful when saving data.",
