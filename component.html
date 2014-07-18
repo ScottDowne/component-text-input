@@ -60,7 +60,7 @@
       ready: function () {
         this.super();
         var that = this;
-        this.$.button.innerHTML = this.gettext("ceci-text-input/button") || this.$.button.innerHTML;
+        this.$.button.textContent = this.gettext("ceci-text-input/button") || this.$.button.textContent;
       },
       submit: function () {
         this.broadcast('sendData', this.$.inputText.value);
